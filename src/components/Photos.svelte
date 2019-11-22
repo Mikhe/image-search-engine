@@ -10,7 +10,7 @@
     let photos = fetchPics('awesome');
 
     async function fetchPics(search) {
-        const response = await unsplash.search.photos(search, 1, 30);
+        const response = await unsplash.search.photos(search, 1, 9);
         const result = await toJson(response);
 
         return result.results;
