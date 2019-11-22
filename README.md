@@ -1,4 +1,4 @@
-# A simple svelte app to search images
+# A simple svelte app to search images https://mikhe.github.io/image-search-engine/
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
