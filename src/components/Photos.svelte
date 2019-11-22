@@ -28,6 +28,8 @@
 	<div class="photos">
     	{#each photos as { urls }}
     		<Photo url={urls.small} className="photo" />
+        {:else}
+            <h2>Type to search</h2>
     	{/each}
     </div>
 {:catch error}
@@ -52,5 +54,9 @@
 
     .photos:hover :global(.photo):hover {
         opacity: 1;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 </style>
