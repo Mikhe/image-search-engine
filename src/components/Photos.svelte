@@ -4,6 +4,7 @@
     import debounce from 'lodash.debounce';
 
     import Photo from './Photo.svelte';
+    import Input from './Input.svelte';
 
     const unsplash = getContext('unsplash');
     let search = '';
@@ -21,7 +22,7 @@
     }, 800);
 </script>
 
-<input on:input={handleChange} bind:value={search} placeholder="Search">
+<Input handleChange={handleChange} value={search} placeholder="Search" />
 {#await photos}
 	<p>...loading</p>
 {:then photos}
