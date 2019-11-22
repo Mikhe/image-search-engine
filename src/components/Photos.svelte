@@ -29,7 +29,7 @@
     	{#each photos as { urls }}
     		<Photo url={urls.small} className="photo" />
         {:else}
-            <h2>Type to search</h2>
+            <h2>Found nothing. Type to search new pics.</h2>
     	{/each}
     </div>
 {:catch error}
