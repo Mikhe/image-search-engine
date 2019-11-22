@@ -12,6 +12,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "lodash.debounce": "^4.0.8",
     "sirv-cli": "^0.4.4",
     "unsplash-js": "^6.0.0"
   },
