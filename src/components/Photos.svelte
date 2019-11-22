@@ -1,7 +1,6 @@
 <script>
     import { getContext } from 'svelte';
     import { toJson } from 'unsplash-js';
-    import debounce from 'lodash.debounce';
 
     import Photo from './Photo.svelte';
     import Input from './Input.svelte';
@@ -17,9 +16,9 @@
         return result.results;
     }
 
-    const handleChange = debounce (async ({ target: { value }}) => {
+    async function handleChange({ target: { value }}) {
         photos = await fetchPics(value);
-    }, 800);
+    }
 </script>
 
 <Input handleChange={handleChange} value={search} placeholder="Search" />
