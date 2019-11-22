@@ -1,5 +1,5 @@
 <script>
-    import { onMount, getContext } from 'svelte';
+    import { getContext } from 'svelte';
     import { toJson } from 'unsplash-js';
     import debounce from 'lodash.debounce';
 
@@ -15,7 +15,7 @@
         const result = await toJson(response);
 
         return result.results;
-    };
+    }
 
     const handleChange = debounce (async ({ target: { value }}) => {
         photos = await fetchPics(value);
